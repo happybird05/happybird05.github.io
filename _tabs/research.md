@@ -4,7 +4,7 @@ icon: fas fa-flask
 order: 3
 ---
 
-`research-log` 카테고리 글을 자동으로 모아 보여줍니다.
+This page automatically lists posts in the `research-log` category.
 
 {% assign logs = site.posts | where_exp: "post", "post.categories contains 'research-log'" | sort: "date" | reverse %}
 
@@ -15,5 +15,5 @@ order: 3
   - {{ post.summary }}
 {% endfor %}
 {% else %}
-아직 등록된 개인 연구 로그가 없습니다.
+No research logs have been published yet.
 {% endif %}

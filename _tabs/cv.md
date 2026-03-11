@@ -23,4 +23,4 @@ order: 1
 ## Contact
 
 - Email: yourname@domain.com
-- CV PDF: [다운로드 링크 추가](#)
+- CV PDF: [Add download link](#)

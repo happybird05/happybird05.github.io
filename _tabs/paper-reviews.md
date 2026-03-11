@@ -4,7 +4,7 @@ icon: fas fa-book-open
 order: 2
 ---
 
-`paper-review` 카테고리 글을 자동으로 모아 보여줍니다.
+This page automatically lists posts in the `paper-review` category.
 
 {% assign reviews = site.posts | where_exp: "post", "post.categories contains 'paper-review'" | sort: "date" | reverse %}
 
@@ -15,5 +15,5 @@ order: 2
   - {{ post.summary }}
 {% endfor %}
 {% else %}
-아직 등록된 논문 리뷰가 없습니다.
+No paper reviews have been published yet.
 {% endif %}

@@ -5,26 +5,26 @@ categories: [paper-review]
 tags: [multimodal]
 authors: "Author et al."
 venue: "Venue 2025"
-summary: "데이터셋 특성과 재현 가능성을 중심으로 정리한 멀티모달 논문 리뷰."
+summary: "A multimodal paper review focused on dataset properties and reproducibility."
 ---
 
-## 문제 정의
+## Problem Statement
 
-멀티모달 모델의 도메인 전이 성능 저하를 개선하는 방법을 제시합니다.
+The paper proposes a method to improve domain transfer performance in multimodal models.
 
-## 핵심 방법
+## Core Method
 
-모달리티별 adapter를 경량화하고 학습 스케줄을 분리합니다.
+It lightweightens modality-specific adapters and separates the training schedule.
 
-## 실험 결과
+## Experimental Results
 
-- Zero-shot 전이 성능 +1.8%
-- 데이터가 적은 환경에서 특히 효과적
+- +1.8% zero-shot transfer performance
+- Particularly effective in low-data settings
 
-## 한계
+## Limitations
 
-대규모 데이터셋에서는 개선폭이 제한적입니다.
+Improvements are limited on very large datasets.
 
-## 내 연구와의 연결
+## Connection to My Research
 
-Vision-Language reproduction 실험의 비교 베이스라인으로 활용 가능합니다.
+This can serve as a comparative baseline for my vision-language reproduction work.

@@ -6,7 +6,7 @@ theme: jekyll-theme-chirpy
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: ko-KR
+lang: en
 
 # Change to your timezone › https://zones.arilyn.cc
 timezone: Asia/Seoul
@@ -19,7 +19,7 @@ title: happybird05 research blog # the main title
 tagline: CV, paper reviews, and personal research logs # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  CV, 논문 리뷰, 개인 연구를 기록하는 개인 블로그입니다.
+  A personal blog for sharing CV, paper reviews, and individual research logs.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -35,13 +35,13 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: happybird05
-  email: yourname@domain.com # change to your email address
+  email: minseo1039@korea.ac.kr # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/happybird05 # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/%EB%AF%BC%EC%84%9C-%EC%86%A1-21598239a/
 
 # Site Verification Settings
 webmaster_verifications:

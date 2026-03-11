@@ -4,26 +4,26 @@ date: 2026-03-07 09:00:00 +0900
 categories: [research-log]
 tags: [reproduction, vlm]
 status: "Tracking"
-summary: "논문 구현과 공개 코드 구현의 차이를 점검한 재현 로그."
+summary: "A reproduction log auditing differences between the paper implementation and public code."
 ---
 
-## 연구 질문
+## Research Question
 
-재현 실패의 주요 원인이 데이터 처리인지, 학습 스케줄인지 식별할 수 있는가?
+Can we identify whether reproduction failures mainly come from data processing or training schedules?
 
-## 점검 항목
+## Audit Checklist
 
-- 전처리 파이프라인 일치 여부
-- 하이퍼파라미터 설정 차이
-- 평가 코드 버전 차이
+- Preprocessing pipeline consistency
+- Hyperparameter configuration differences
+- Evaluation code version differences
 
-## 현재 상태
+## Current Status
 
-- 전처리 단계에서 샘플링 전략 차이 발견
-- 동일 조건 재실험 진행 중
+- Found a sampling strategy mismatch in preprocessing
+- Re-running experiments under aligned settings
 
-## 다음 액션
+## Next Actions
 
-1. 샘플링 전략 통일 후 재실험
-2. ablation 표준 포맷으로 결과 정리
-3. 재현 이슈 문서화
+1. Re-run after unifying the sampling strategy
+2. Organize results in a standard ablation format
+3. Document reproduction issues
