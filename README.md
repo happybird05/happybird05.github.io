@@ -1,47 +1,49 @@
 # happybird05.github.io
 
-Jekyll 기반으로 구성한 개인 연구 블로그입니다.
+`jekyll-theme-chirpy` 기반으로 구성한 개인 연구 블로그입니다.
 
-## 핵심 구조
-- `_config.yml`: 사이트 설정 + 컬렉션(`paper_reviews`, `research_logs`)
-- `_layouts/default.html`: 공통 레이아웃
-- `_layouts/post.html`: 리뷰/연구 상세 레이아웃
-- `index.html`: 홈 (최신 논문 리뷰/개인 연구 자동 목록)
-- `cv.md`: CV 페이지
-- `paper-reviews.md`: 논문 리뷰 목록 페이지
-- `research.md`: 개인 연구 목록 페이지
-- `_paper_reviews/*.md`: 논문 리뷰 원고
-- `_research_logs/*.md`: 개인 연구 원고
-- `assets/css/main.css`: 공통 스타일
+## 현재 구조
 
-## 로컬 실행
-1. Ruby/Bundler 설치
-2. 의존성 설치
-   - `bundle install`
-3. 개발 서버 실행
-   - `bundle exec jekyll serve`
-4. 브라우저에서 `http://127.0.0.1:4000` 접속
+- `_config.yml`: Chirpy 사이트 설정
+- `_tabs/`: 사이드바 탭 페이지
+  - `cv.md`
+  - `paper-reviews.md`
+  - `research.md`
+  - `categories.md`, `tags.md`, `archives.md`, `about.md`
+- `_posts/`: 실제 게시글 (논문 리뷰/개인 연구 로그)
+- `_data/contact.yml`: 사이드바 연락처 아이콘
+- `_plugins/posts-lastmod-hook.rb`: Git 기반 last modified 자동 반영
 
-### WSL(Ubuntu)에서 실행 예시
+## 로컬 실행 (WSL Ubuntu)
+
 ```bash
 cd /mnt/c/Users/aqmn8/Desktop/min_blog/happybird05.github.io
 ~/.local/share/gem/ruby/3.0.0/bin/bundle install
 ~/.local/share/gem/ruby/3.0.0/bin/bundle exec jekyll serve --host 0.0.0.0 --port 4000
 ```
 
-## 새 글 작성
-- 논문 리뷰: `_paper_reviews/날짜-슬러그.md`
-- 개인 연구: `_research_logs/날짜-슬러그.md`
+브라우저: `http://127.0.0.1:4000`
 
-각 파일의 front matter 예시:
+## 글 작성 규칙
+
+모든 글은 `_posts`에 작성합니다.
+
+- 논문 리뷰 글: `categories: [paper-review]`
+- 개인 연구 글: `categories: [research-log]`
+
+예시:
 
 ```yaml
 ---
 title: "글 제목"
-date: 2026-03-11
+date: 2026-03-11 09:00:00 +0900
+categories: [paper-review]
+tags: [llm]
 summary: "짧은 요약"
 ---
 ```
 
 ## 참고
-- 이전 정적 HTML 템플릿(`template-*.html`, `template-*.css`) 파일은 그대로 보관되어 있습니다.
+
+- 기존 커스텀 구조 파일은 `_legacy_pre_chirpy/`에 보관했습니다.
+- 이전 정적 템플릿 파일(`template-*.html`, `template-*.css`)은 그대로 남겨두었습니다.

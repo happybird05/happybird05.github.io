@@ -6,6 +6,23 @@ _site/
 # Ruby/Bundler
 .bundle/
 vendor/
+Gemfile.lock
+*.gem
+
+# NPM dependencies
+node_modules/
+package-lock.json
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Chirpy build artifacts
+_sass/vendors/
+assets/js/dist/
 
 # OS/editor
 .DS_Store
