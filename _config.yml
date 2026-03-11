@@ -1,0 +1,36 @@
+title: happybird05 research blog
+description: CV, 논문 리뷰, 개인 연구 기록 블로그
+lang: ko
+timezone: Asia/Seoul
+url: "https://happybird05.github.io"
+baseurl: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  paper_reviews:
+    output: true
+    permalink: /paper-reviews/:name/
+  research_logs:
+    output: true
+    permalink: /research/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "paper_reviews"
+    values:
+      layout: post
+      category_label: Paper Review
+  - scope:
+      path: ""
+      type: "research_logs"
+    values:
+      layout: post
+      category_label: Research Log

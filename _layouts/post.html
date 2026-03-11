@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="entry">
+  <header class="entry-header">
+    <p class="entry-kind">{{ page.category_label }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="entry-meta">
+      {{ page.date | date: "%Y-%m-%d" }}
+      {% if page.authors %} · {{ page.authors }}{% endif %}
+      {% if page.venue %} · {{ page.venue }}{% endif %}
+      {% if page.status %} · {{ page.status }}{% endif %}
+    </p>
+  </header>
+
+  {% if page.summary %}
+  <section class="entry-block">
+    <h2>요약</h2>
+    <p>{{ page.summary }}</p>
+  </section>
+  {% endif %}
+
+  {{ content }}
+
+  <p class="entry-back">
+    {% if page.collection == 'paper_reviews' %}
+    <a href="{{ '/paper-reviews/' | relative_url }}">← 논문 리뷰 목록으로</a>
+    {% elsif page.collection == 'research_logs' %}
+    <a href="{{ '/research/' | relative_url }}">← 개인 연구 목록으로</a>
+    {% endif %}
+  </p>
+</article>

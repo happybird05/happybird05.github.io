@@ -1,179 +1,47 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happybird Research Blog</title>
-    <meta
-      name="description"
-      content="CV, 논문 리뷰, 개인 연구 기록을 정리하는 개인 연구 블로그 템플릿"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="bg-shape shape-a" aria-hidden="true"></div>
-    <div class="bg-shape shape-b" aria-hidden="true"></div>
+---
+layout: default
+title: Home
+permalink: /
+---
+<section class="hero">
+  <p class="eyebrow">Academic Portfolio</p>
+  <h1>CV, 논문 리뷰, 개인 연구를 Jekyll로 관리합니다.</h1>
+  <p>
+    정적 HTML 대신 Jekyll 컬렉션 기반으로 전환했습니다. 논문 리뷰와 연구 로그를
+    Markdown 파일로 추가하면 자동으로 목록/상세 페이지가 생성됩니다.
+  </p>
+</section>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#top">happybird05</a>
-        <nav class="main-nav" aria-label="주요 메뉴">
-          <a href="#cv">CV</a>
-          <a href="#paper-reviews">논문 리뷰</a>
-          <a href="#research">개인 연구</a>
-          <a href="#contact">연락처</a>
-        </nav>
-        <a class="btn btn-outline" href="#cv">CV 보기</a>
-      </div>
-    </header>
+<section class="section-panel">
+  <p class="eyebrow">Latest Paper Reviews</p>
+  <h2>최근 논문 리뷰</h2>
+  <div class="grid-2">
+    {% assign latest_reviews = site.paper_reviews | sort: "date" | reverse | slice: 0, 4 %}
+    {% for review in latest_reviews %}
+    <article class="list-card">
+      <p class="item-meta">{{ review.date | date: "%Y-%m-%d" }} · {{ review.venue }}</p>
+      <a href="{{ review.url | relative_url }}">
+        <h3>{{ review.title }}</h3>
+      </a>
+      <p>{{ review.summary }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
 
-    <main id="top">
-      <section class="hero container">
-        <div class="hero-copy" data-animate>
-          <p class="eyebrow">Academic Portfolio</p>
-          <h1>CV, 리뷰, 연구 로그를 한 곳에.</h1>
-          <p class="hero-text">
-            연구 이력과 논문 읽기 기록, 실험 기반 개인 프로젝트를 구조적으로 정리하는
-            GitHub Pages용 정적 블로그 템플릿입니다.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-solid" href="#paper-reviews">최근 리뷰 보기</a>
-            <a class="btn btn-ghost" href="#research">연구 노트 보기</a>
-          </div>
-        </div>
-        <aside class="profile-card" data-animate>
-          <h2>About</h2>
-          <p><strong>홍길동</strong> / AI Researcher</p>
-          <ul class="meta-list">
-            <li>Affiliation: Your Lab / University</li>
-            <li>Interest: LLM, Multimodal, HCI</li>
-            <li>Email: yourname@domain.com</li>
-          </ul>
-          <a class="text-link" href="#">PDF CV 다운로드</a>
-        </aside>
-      </section>
-
-      <section id="cv" class="section container">
-        <div class="section-head">
-          <p class="eyebrow">Section 01</p>
-          <h2>CV</h2>
-        </div>
-        <div class="cv-grid">
-          <article class="panel" data-animate>
-            <h3>Education</h3>
-            <p><strong>M.S. in Computer Science</strong> (2024 - Present)</p>
-            <p>ABC University, Graduate School</p>
-            <p><strong>B.S. in Software Engineering</strong> (2020 - 2024)</p>
-            <p>XYZ University</p>
-          </article>
-          <article class="panel" data-animate>
-            <h3>Experience</h3>
-            <p><strong>Research Intern</strong> (2025 Summer)</p>
-            <p>Company / Lab Name</p>
-            <p><strong>Teaching Assistant</strong> (2024 Fall)</p>
-            <p>Course: Machine Learning Basics</p>
-          </article>
-          <article class="panel" data-animate>
-            <h3>Skills</h3>
-            <p>Python, PyTorch, Hugging Face, LangChain</p>
-            <p>Experiment Tracking, Paper Reproduction</p>
-            <p>Technical Writing, Research Presentation</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="paper-reviews" class="section container">
-        <div class="section-head">
-          <p class="eyebrow">Section 02</p>
-          <h2>논문 리뷰</h2>
-        </div>
-        <div class="card-grid">
-          <article class="paper-card" data-animate>
-            <p class="card-meta">2026-03-10 · LLM</p>
-            <h3>Paper Title Placeholder #1</h3>
-            <p class="paper-cite">Author et al., Venue 2026</p>
-            <p>
-              핵심 아이디어, 실험 설정, 강점/한계, 내 연구와의 연결점을 요약하는 카드
-              템플릿입니다.
-            </p>
-            <a class="text-link" href="#">리뷰 전체 읽기</a>
-          </article>
-          <article class="paper-card" data-animate>
-            <p class="card-meta">2026-03-01 · Multimodal</p>
-            <h3>Paper Title Placeholder #2</h3>
-            <p class="paper-cite">Author et al., Venue 2025</p>
-            <p>
-              재현 가능성, 데이터셋 특성, ablation 결과를 중심으로 분석하는 형식으로
-              사용하세요.
-            </p>
-            <a class="text-link" href="#">리뷰 전체 읽기</a>
-          </article>
-          <article class="paper-card" data-animate>
-            <p class="card-meta">2026-02-18 · HCI</p>
-            <h3>Paper Title Placeholder #3</h3>
-            <p class="paper-cite">Author et al., Venue 2024</p>
-            <p>
-              방법론 비교와 실무 적용 가능성까지 함께 정리하는 개인 리뷰 양식입니다.
-            </p>
-            <a class="text-link" href="#">리뷰 전체 읽기</a>
-          </article>
-        </div>
-      </section>
-
-      <section id="research" class="section container">
-        <div class="section-head">
-          <p class="eyebrow">Section 03</p>
-          <h2>개인 연구</h2>
-        </div>
-        <div class="research-list">
-          <article class="research-item" data-animate>
-            <p class="card-meta">Project A · Ongoing</p>
-            <h3>Few-shot Prompt Optimization</h3>
-            <p>
-              실험 목적, 세팅, 중간 결과, 다음 액션을 짧은 로그로 기록하는 템플릿.
-            </p>
-            <a class="text-link" href="#">연구 노트 보기</a>
-          </article>
-          <article class="research-item" data-animate>
-            <p class="card-meta">Project B · Reproduction</p>
-            <h3>Vision-Language Model Reproduction</h3>
-            <p>
-              논문 재현 과정에서 발생한 이슈와 해결 방법을 남겨 재사용 가능한 레퍼런스를
-              만듭니다.
-            </p>
-            <a class="text-link" href="#">연구 노트 보기</a>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section container">
-        <div class="contact-panel" data-animate>
-          <p class="eyebrow">Contact</p>
-          <h2>협업 또는 질문이 있다면 연락 주세요</h2>
-          <p>
-            GitHub Pages 배포 기준 템플릿입니다. 필요하면 Markdown 기반 포스트
-            구조(Jekyll)로 확장할 수 있습니다.
-          </p>
-          <p>
-            Email:
-            <a class="text-link" href="mailto:yourname@domain.com"
-              >yourname@domain.com</a
-            >
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 happybird05. Built with plain HTML/CSS.</p>
-      </div>
-    </footer>
-  </body>
-</html>
+<section class="section-panel">
+  <p class="eyebrow">Latest Research Logs</p>
+  <h2>최근 개인 연구</h2>
+  <div class="grid-2">
+    {% assign latest_logs = site.research_logs | sort: "date" | reverse | slice: 0, 4 %}
+    {% for log in latest_logs %}
+    <article class="list-card">
+      <p class="item-meta">{{ log.date | date: "%Y-%m-%d" }} · {{ log.status }}</p>
+      <a href="{{ log.url | relative_url }}">
+        <h3>{{ log.title }}</h3>
+      </a>
+      <p>{{ log.summary }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>

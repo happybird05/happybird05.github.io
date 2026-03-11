@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Pipeline | happybird05</title>
+    <meta
+      name="description"
+      content="논문 리뷰 파이프라인과 개인 연구 파이프라인을 운영하는 블로그 템플릿"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="template-pipeline.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="logo" href="#top">happybird05 / Pipeline</a>
+        <nav aria-label="메뉴">
+          <a href="#cv">CV</a>
+          <a href="#paper-window">논문 리뷰 창</a>
+          <a href="#research-window">개인 연구 창</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="container main">
+      <section class="hero panel">
+        <p class="chip">Template 05</p>
+        <h1>리뷰와 연구를 파이프라인으로 관리하는 템플릿</h1>
+        <p>
+          무엇을 읽고, 무엇을 실험하고, 무엇을 다음으로 할지 한 화면에서 추적하는
+          구조입니다.
+        </p>
+      </section>
+
+      <section id="cv" class="panel cv">
+        <div class="title-row">
+          <p class="index">01</p>
+          <h2>CV Overview</h2>
+        </div>
+        <div class="cv-list">
+          <article>
+            <h3>Education</h3>
+            <p>M.S. Computer Science (2024 - Present)</p>
+            <p>B.S. Software Engineering (2020 - 2024)</p>
+          </article>
+          <article>
+            <h3>Experience</h3>
+            <p>Research Intern (2025)</p>
+            <p>Teaching Assistant (2024)</p>
+          </article>
+          <article>
+            <h3>Skills & Contact</h3>
+            <p>PyTorch, Evaluation, Experiment Tracking</p>
+            <p>yourname@domain.com</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pipeline">
+        <article id="paper-window" class="panel window">
+          <div class="title-row">
+            <p class="index">02</p>
+            <h2>논문 리뷰 창</h2>
+          </div>
+          <p class="window-desc">
+            읽기 상태별로 논문을 관리하고, 리뷰 작성 기준을 고정해 품질을 맞춥니다.
+          </p>
+          <div class="columns">
+            <section>
+              <h3>읽는 중</h3>
+              <a href="#" class="item">
+                <p class="meta">LLM · 2026-03-10</p>
+                <p>Paper Placeholder A</p>
+              </a>
+              <a href="#" class="item">
+                <p class="meta">Multimodal · 2026-03-08</p>
+                <p>Paper Placeholder B</p>
+              </a>
+            </section>
+            <section>
+              <h3>리뷰 작성</h3>
+              <a href="#" class="item">
+                <p class="meta">HCI · 2026-03-04</p>
+                <p>Paper Placeholder C</p>
+              </a>
+            </section>
+            <section>
+              <h3>완료</h3>
+              <a href="#" class="item">
+                <p class="meta">NLP · 2026-02-27</p>
+                <p>Paper Placeholder D</p>
+              </a>
+            </section>
+          </div>
+          <div class="criteria">
+            <h3>리뷰 기준</h3>
+            <p>문제 정의 / 방법 차별성 / 실험 타당성 / 한계 / 내 연구 연결점</p>
+          </div>
+        </article>
+
+        <article id="research-window" class="panel window">
+          <div class="title-row">
+            <p class="index">03</p>
+            <h2>개인 연구 창</h2>
+          </div>
+          <p class="window-desc">
+            가설부터 재실험, 회고까지 단계를 나눠 연구 진행률을 관리합니다.
+          </p>
+          <div class="columns">
+            <section>
+              <h3>가설</h3>
+              <div class="item">
+                <p class="meta">Question #1</p>
+                <p>Prompt 구조 변경이 소형 모델 성능에 미치는 영향</p>
+              </div>
+            </section>
+            <section>
+              <h3>실험중</h3>
+              <div class="item">
+                <p class="meta">Run #24</p>
+                <p>Adapter rank sweep with fixed seed</p>
+              </div>
+              <div class="item">
+                <p class="meta">Run #25</p>
+                <p>Data mix ratio 8:2 validation</p>
+              </div>
+            </section>
+            <section>
+              <h3>회고/다음 액션</h3>
+              <div class="item">
+                <p class="meta">Weekly Memo</p>
+                <p>성능 개선 +1.7%, 실패 사례 분석 40개 필요</p>
+              </div>
+            </section>
+          </div>
+          <div class="todo">
+            <h3>이번 주 TODO</h3>
+            <ol>
+              <li>best run 재검증 3회</li>
+              <li>오류 유형 taxonomy 업데이트</li>
+              <li>논문 리뷰 결과와 실험 로그 연결</li>
+            </ol>
+          </div>
+        </article>
+      </section>
+
+      <section id="contact" class="panel contact">
+        <h2>Contact</h2>
+        <p>협업 제안, 피드백: <a href="mailto:yourname@domain.com">yourname@domain.com</a></p>
+      </section>
+    </main>
+  </body>
+</html>

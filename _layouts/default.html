@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'ko' }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    {% seo %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}">happybird05</a>
+        <nav class="main-nav" aria-label="주요 메뉴">
+          <a href="{{ '/cv/' | relative_url }}">CV</a>
+          <a href="{{ '/paper-reviews/' | relative_url }}">논문 리뷰</a>
+          <a href="{{ '/research/' | relative_url }}">개인 연구</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© {{ 'now' | date: '%Y' }} happybird05. Powered by Jekyll.</p>
+      </div>
+    </footer>
+  </body>
+</html>
