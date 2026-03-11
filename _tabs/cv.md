@@ -4,23 +4,30 @@ icon: fas fa-user-graduate
 order: 1
 ---
 
+## Profile
+
+- **Name:** Minseo Song
+- **Summary:** Second-year Cyber Defense undergraduate at Korea University, currently completing the final training program of the Cykor security club. Interested in AI-driven security tool development and hardware security, with a focus on applying machine learning to practical offensive and defensive security problems.
+
 ## Education
 
-- **M.S. in Computer Science** (2024 - Present), ABC University Graduate School
-- **B.S. in Software Engineering** (2020 - 2024), XYZ University
+- **B.S. in Cyber Defense** (2024 - Present), Korea University, Department of Cyber Defense
+- **GPA:** 4.08 / 4.5
 
 ## Experience
 
-- **Research Intern** (2025), Company / Lab Name
-- **Teaching Assistant** (2024), Machine Learning Basics
+- **Finance Officer**, Student Council, Division of Smart Security, Korea University (2024), Seoul, Republic of Korea
+- **Executive Director**, Student Council, Division of Smart Security, Korea University (2025), Seoul, Republic of Korea
 
 ## Skills
 
-- Python, PyTorch, Hugging Face
-- Experiment Tracking, Paper Reproduction
-- Technical Writing, Presentation
+- C
+- C++
+- Python
 
 ## Contact
 
-- Email: yourname@domain.com
+- Portfolio: `Portfolio` (update with actual URL)
+- Email: minseo1039@korea.ac.kr
+- Mobile: 010-9772-8363
 - CV PDF: [Add download link](#)
