@@ -2,7 +2,7 @@
 title: "Few-shot Prompt Optimization"
 date: 2026-03-09 09:00:00 +0900
 categories: [research-log]
-tags: [prompting, experiments]
+tags: [prompting]
 status: "Ongoing"
 summary: "An experiment log tracking performance changes from prompt structure updates."
 ---
