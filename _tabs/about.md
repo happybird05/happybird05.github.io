@@ -6,13 +6,16 @@ order: 7
 
 ## About
 
-This is a personal research blog for organizing CV, paper reviews, and research logs.
+Hi, I'm Minseo Song, a Cyber Defense undergraduate at Korea University and an undergraduate researcher at the Hardware Security Lab.
+
+My research focuses on file system vulnerabilities and hardware-enforced protection mechanisms under an untrusted-kernel threat model. This blog is where I organize my CV, paper reviews, and research logs.
 
 ## Research Interests
 
-- Hardware / TEE
-- Security
-- PWN
+- File System Security
+- Kernel Security
+- Trusted Execution Environments (TEE)
+- Hardware Security
 
 ## Contact
 

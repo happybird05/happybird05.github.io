@@ -7,27 +7,37 @@ order: 1
 ## Profile
 
 - **Name:** Minseo Song
-- **Summary:** Second-year Cyber Defense undergraduate at Korea University, currently completing the final training program of the Cykor security club. Interested in AI-driven security tool development and hardware security, with a focus on applying machine learning to practical offensive and defensive security problems.
+- **Affiliation:** Department of Cyber Defense, Korea University
+- **Position:** Undergraduate Researcher, Hardware Security Lab
+
+## Summary
+
+Cyber Defense undergraduate at Korea University and undergraduate researcher at the Hardware Security Lab. My research focuses on file system vulnerabilities and hardware-enforced protection mechanisms under an untrusted-kernel threat model, with interests in kernel vulnerability analysis, trusted execution environments, and hardware security.
 
 ## Education
 
-- **B.S. in Cyber Defense** (2024 - Present), Korea University, Department of Cyber Defense
-- **GPA:** 4.08 / 4.5
+- **Korea University** (2024 – Present), Seoul, Republic of Korea
+  - B.S. Candidate in Cyber Defense
 
-## Experience
+## Technical Profile
 
-- **Finance Officer**, Student Council, Division of Smart Security, Korea University (2024), Seoul, Republic of Korea
-- **Executive Director**, Student Council, Division of Smart Security, Korea University (2025), Seoul, Republic of Korea
+- **Programming Languages:** C, C++, Python
+- **Research Interests:** File System Security, Kernel Security, Trusted Execution Environments, Hardware Security
 
-## Skills
+## Leadership & Activities
 
-- C
-- C++
-- Python
+- **Student Council, Division of Smart Security, Korea University** (2024 – 2025)
+  - Finance Committee Member, 2024
+  - Executive Committee Chair, 2025
+- **MatKor, Korea University Algorithm Club** (2024 – Present)
+  - Member, 2024
+  - Executive Board Member, 2025 – Present
+- **KoS CTF** (2025)
+  - Organizer
+  - Joint CTF organized by Korea University and Sungshin Women's University.
+- **Cykor, Korea University Hacking Club** (2026 – Present)
+  - Member
 
 ## Contact
 
-- Portfolio: `Portfolio` (update with actual URL)
 - Email: minseo1039@korea.ac.kr
-- Mobile: 010-9772-8363
-- CV PDF: [Add download link](#)
